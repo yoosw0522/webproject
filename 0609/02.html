@@ -41,7 +41,15 @@
                 }
                 img.src = "imgs/mandu" + count + ".jpg";
             }, 2000);
+
+            let a1 = document.getElementById("a1");
+            a1.onclick = function(event){
+            // event.preventDefault(); // a태그의 디폴트 이벤트 제거
+                return false; // a태그의 디폴트 이벤트 제거
+            };
         }
+
+
     </script>
 </head>
 <body onload="showImageSlide()">
@@ -51,5 +59,6 @@
     <button onmouseover="overChange(this)" onmouseout="outChange(this)">배경 및 글자색 변경</button><br><br>
     <img src="imgs/mandu1.jpg" width="600" height="700" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
     <img src="imgs/mandu1.jpg" width="600" height="700" id="img2">
+    <a href="https://www.naver.com/" id="a1">디폴트 이벤트 제거</a>
 </body>
 </html>
