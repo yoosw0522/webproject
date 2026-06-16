@@ -7,29 +7,28 @@
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script>
         $(document).ready(
-            function(){
-                $("h1").hover(
-                    function(){
-                        $(this).css({
-                            background : "red",
-                            color : "white",
-                            width : "200px",
-                            height : "50px"
-                        });
-                    },
-                    function(){
-                        $(this).css({
-                            background : "",
-                            color : ""
-                        });
+             function(){
+                $("#box").css({
+                    width : "100px",
+                    height : "100px",
+                    background : "orange"
                     }
                 );
-                
+
+                $("#box").on("click", function(){
+                    $(this).css("background", "red");
+                });
+                $("#box").on("mouseenter", function(){
+                    $(this).css("background", "blue");
+                });
+                $("#box").on("mouseleave", function(){
+                    $(this).css("background", "orange");
+                });
             }
         );
     </script>
 </head>
 <body>
-    <h1>Click Here</h1>
+    <div id="box"></div>
 </body>
 </html>

@@ -7,25 +7,26 @@
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
     <script>
         $(document).ready(
-            function(){
-                $("h1").hover(
+             function(){
+                $("h1").click(
                     function(){
                         $(this).css({
-                            background : "red",
-                            color : "white",
-                            width : "200px",
-                            height : "50px"
+                            background: "red",
+                            clolor: "white",
+                            width: "200px",
+                            height: "50px:"
                         });
-                    },
+                });
+                
+                $("h1").mouseout(
                     function(){
                         $(this).css({
-                            background : "",
-                            color : ""
+                            background: "",
+                            clolor: "",
                         });
                     }
-                );
-                
-            }
+                )
+             }
         );
     </script>
 </head>

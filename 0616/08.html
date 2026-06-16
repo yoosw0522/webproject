@@ -8,18 +8,26 @@
     <script>
         $(document).ready(
              function(){
+                $("body").css("background","black");
+
                 $("#box").css({
                     width : "100px",
                     height : "100px",
-                    background : "orange"
+                    background : "orange",
+                    position : "absolute",
+                    left : "10px",
+                    top : "10px"
                     }
-                ).on("click", function(){
-                    $(this).css("background", "red");
-                }).on("mouseenter", function(){
-                    $(this).css("background", "blue");
-                }).on("mouseleave", function(){
-                    $(this).css("background", "orange");
-                });
+                ).animate({
+                    width : "300px",
+                    opacity : 0.2
+                    }, 2000
+                ).animate({
+                    opacity : 1.0,
+                    left : "100px",
+                    top : "100px"
+                    }, 2000
+                );
             }
         );
     </script>
